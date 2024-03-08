@@ -175,6 +175,34 @@ select option {
   }
 
   .controls .row .icons i {
-    font-size: 12px;
+    font-size: 10px;
+  }
+
+  .controls,
+  li,
+  .icons,
+  .icons i {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  select{
+    width: 47px;
+  }
+
+  .row.from{
+    width: 42%;
+  }
+
+  .row.to{
+    width: 42%;
+    margin-left: -70px;
+  }
+
+  .wrapper {
+    width: 62%;
+    margin: auto;
   }
 }

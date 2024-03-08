@@ -22,7 +22,6 @@ const Translate = () => {
     let tempLang = selectTag[0].value;
     selectTag[0].value = selectTag[1].value;
     selectTag[1].value = tempLang;
-
   };
 
   const fromTextKeyUp = () => {
@@ -61,14 +60,14 @@ const Translate = () => {
 
   const startSpeechRecognition = () => {
     const recognition = new window.webkitSpeechRecognition();
-        recognition.lang = selectTagRefs[0].current.value;
+    recognition.lang = selectTagRefs[0].current.value;
 
-        recognition.onresult = (event) => {
-          const speechResult = event.results[0][0].transcript;
-          fromTextRef.current.value = speechResult;
-        };
+    recognition.onresult = (event) => {
+      const speechResult = event.results[0][0].transcript;
+      fromTextRef.current.value = speechResult;
+    };
 
-        recognition.start();
+    recognition.start();
   };
 
   useEffect(() => {
