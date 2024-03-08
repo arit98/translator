@@ -1,0 +1,13 @@
+.header{
+    width: 95%;
+    margin: auto;
+    height: 70px;
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: xx-large;
+    color: aliceblue;
+    border-radius: 5px;
+}
