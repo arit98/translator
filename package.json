@@ -1,6 +1,7 @@
 {
   "name": "translator",
   "version": "0.1.0",
+  "author": "Aritra Das Chowdhury",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

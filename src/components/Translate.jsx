@@ -61,14 +61,14 @@ const Translate = () => {
 
   const startSpeechRecognition = () => {
     const recognition = new window.webkitSpeechRecognition();
-    recognition.lang = selectTagRefs[0].current.value;
+        recognition.lang = selectTagRefs[0].current.value;
 
-    recognition.onresult = (event) => {
-      const speechResult = event.results[0][0].transcript;
-      fromTextRef.current.value = speechResult;
-    };
+        recognition.onresult = (event) => {
+          const speechResult = event.results[0][0].transcript;
+          fromTextRef.current.value = speechResult;
+        };
 
-    recognition.start();
+        recognition.start();
   };
 
   useEffect(() => {
@@ -85,7 +85,7 @@ const Translate = () => {
         } else {
           navigator.clipboard.writeText(toText.value);
         }
-      } else {
+      } else if (target.classList.contains("fa-volume-up")) {
         let utterance;
         if (target.id.startsWith("from")) {
           utterance = new SpeechSynthesisUtterance(fromText.value);
@@ -95,6 +95,16 @@ const Translate = () => {
           utterance.lang = selectTag[1].value;
         }
         speechSynthesis.speak(utterance);
+      } else {
+        const recognition = new window.webkitSpeechRecognition();
+        recognition.lang = selectTagRefs[0].current.value;
+
+        recognition.onresult = (event) => {
+          const speechResult = event.results[0][0].transcript;
+          fromTextRef.current.value = speechResult;
+        };
+
+        recognition.start();
       }
     };
 
