@@ -68,7 +68,7 @@ const languageList = {
     "rn-BI": "Kirundi",
     "ro-RO": "Romanian",
     "ru-RU": "Russian",
-    "sa-IN": "Sanskrit",
+    "sa-IN": "Sanskrit" || "hi-IN",
     "sg-CF": "Sango",
     "si-LK": "Sinhala",
     "sk-SK": "Slovak",
