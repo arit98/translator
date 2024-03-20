@@ -1,21 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
-  min-height: 100vh;
-  background: #212121;
-}
-
 .container {
-  min-width: 1200px;
+  min-width: 100%;
   min-height: 600px;
   width: 100%;
   padding: 30px;
@@ -25,6 +9,8 @@ body {
 }
 
 .wrapper {
+  width: 78%;
+  margin: auto;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
@@ -198,11 +184,11 @@ select option {
 
   .row.to{
     width: 42%;
-    margin-left: -70px;
+    margin-left: -78px;
   }
 
   .wrapper {
-    width: 62%;
+    width: 100%;
     margin: auto;
   }
 }
